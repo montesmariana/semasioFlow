@@ -346,6 +346,24 @@ within <cite>settings[‘output-path’]</cite>. If the directory does not exist
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="semasioFlow.load.loadFocRegisters">
+<span class="sig-prename descclassname"><span class="pre">semasioFlow.load.</span></span><span class="sig-name descname"><span class="pre">loadFocRegisters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">register_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefixes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['bow',</span> <span class="pre">'rel',</span> <span class="pre">'path']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#semasioFlow.load.loadFocRegisters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load and combine first-order register dataframes.</p>
+<dl class="simple">
+<dt>register_path<span class="classifier">str</span></dt><dd><p>Directory where the dataframes are stored.</p>
+</dd>
+<dt>type_name<span class="classifier">str</span></dt><dd><p>First part of the file names.</p>
+</dd>
+<dt>prefixes<span class="classifier">list of str</span></dt><dd><p>Infixes in the filenames</p>
+</dd>
+</dl>
+<dl>
+<dt>registers<span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></span></dt><dd><p>Merged register dataframes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="semasioFlow.load.loadMacro">
 <span class="sig-prename descclassname"><span class="pre">semasioFlow.load.</span></span><span class="sig-name descname"><span class="pre">loadMacro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">templates_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graphml_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">macro_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#semasioFlow.load.loadMacro" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load patterns and templates to create dependency-based models.</p>
