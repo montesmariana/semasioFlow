@@ -1,4 +1,6 @@
 import os
+import pandas as pd
+from functools import reduce
 
 from qlvl import Vocab, TypeTokenMatrix
 from qlvl import ItemFreqHandler, ColFreqHandler
@@ -87,4 +89,34 @@ def loadColloc(fname, settings, fnames = None, row_vocab = None, col_vocab = Non
         freqMTX = cfhan.build_col_freq(fnames = fnames)
         freqMTX.save(fname)
         return freqMTX
+
+def loadFocRegisters(register_path, type_name, prefixes = ["bow", "rel", "path"]):
+    """Load and combine first-order register dataframes.
+
+    Parameters
+    ----------
+    register_path : str
+        Directory where the dataframes are stored.
+    type_name : str
+        First part of the file names.
+    prefixes : list of str
+        Infixes in the filenames
+        
+    Returns
+    -------
+    registers : :class:`pandas.DataFrame`
+        Merged register dataframes
+    """
     
+    def loadReg(prefix):
+        with open(f"{register_path}/{type_name}.{prefix}-models.tsv", "r") as f:
+            reg = pd.read_csv(f, sep = "\t")
+        return reg
+    
+    def myMerge(df1, df2):
+        return df1.merge(df2, how = "outer")
+    
+    registers = [loadReg(x) for x in prefixes]
+    registers = reduce(myMerge, registers)
+    registers = registers.set_index("_model")
+    return registers
