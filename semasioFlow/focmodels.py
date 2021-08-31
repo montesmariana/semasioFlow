@@ -32,7 +32,7 @@ def createBow(query, settings, type_name = None,
     foc_win : list of tuples, optional
         List of window size settings; each tuple is one setting indicating left and right spans correspondingly.
         The default value is the one in the settings.
-    foc_pos : dict, 
+    foc_pos : dict, optional
         The keys are the labels of the part-of-speech settings and the values
         are lists of context words to filter the matrix.
         The default value is "all", with no filters.
@@ -240,13 +240,17 @@ def createPath(query, settings, path_macros, type_name = None,
     
     model_register = {}
     
+    def mergeTwo(mat1, mat2):
+        shared_tokens = list(set(mat1.row_items).intersection(set(mat2.row_items)))
+        return merge_two_matrices(mat1.submatrix(row = shared_tokens), mat2.submatrix(row = shared_tokens))
+    
     for path_name, macros, weights in path_macros:
         weights = weights if weights else [1 for _ in range(len(macros))]
         token_matrices = [
             tokensFromMacro(query, macro, settings, fnames, weight)
             for macro, weight in zip(macros, weights)
         ]
-        tokens = reduce(merge_two_matrices, token_matrices)
+        tokens = reduce(mergeTwo, token_matrices)
         rows = tokenlist if tokenlist else tokens.row_items
         cols = foc_filter if foc_filter else tokens.col_items
         

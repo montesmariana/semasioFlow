@@ -6,13 +6,15 @@ from qlvl import Vocab, TypeTokenMatrix
 from qlvl import ItemFreqHandler, ColFreqHandler
 from qlvl.core.graph import MacroGraph, PatternGraph
 
-def loadVocab(fname, settings):
+def loadVocab(fname, settings, fnames = None):
     """Load an existing vocabulary or create one.
 
     Parameters
     ----------
     fname : str
         Path where an existing vocabulary is stored or where it would be stored.
+    fnames : str or list, optional
+        Corpus file names
     settings : dict
         Settings for creating the vocabulary and to extract the encoding information.
 
@@ -30,7 +32,7 @@ def loadVocab(fname, settings):
     else:
         print("Creating new vocabulary...")
         ifhan = ItemFreqHandler(settings = settings)
-        vocab = ifhan.build_item_freq()
+        vocab = ifhan.build_item_freq(fnames = fnames)
         vocab.save(fname, encoding = settins['outfile-encoding'])
         return vocab
     
@@ -66,6 +68,8 @@ def loadColloc(fname, settings, fnames = None, row_vocab = None, col_vocab = Non
         Path where an existing vocabulary is stored or where it would be stored.
     settings : dict
         Settings for creating the vocabulary and to extract the encoding information.
+    fnames : str or list, optional
+        Corpus file names
     row_vocab : :class:`~qlvl.Vocab`, optional
         Vocabulary for the rows of the collocation matrix.
     col_vocab : :class:`~qlvl.Vocab`, optional

@@ -118,15 +118,15 @@ def weightTokens(token_dir, weighting, registers, output_dir = None,
             output_name = f"{output_dir}/{modelname}{output_suffix}"
             if not weightMTX:
                 tokweights = tokens.deepcopy()
-                tokweights.save(output_name)
             else:
                 intersected = list(set(tokens.col_items).intersection(set(weightMTX.col_items)))
                 tokweights = compute_token_weights(
                     tokens.submatrix(col = intersected),
                     weightMTX.submatrix(col = intersected)
                 ).drop(axis = 0, n_nonzero = 0)
-                print(tokweights)
-                tokweights.save(output_name)
+            tokweights.save(output_name)
+            model_register[modelname]['tokens'] = len(tokweights.row_items)
+            model_register[modelname]['foc_context_words'] = len(tokweights.col_items)
             token_register["_cws." + modelname] = listCws(tokweights)
             token_register["_count." + modelname] = countCws(tokweights)
     data = {
@@ -196,8 +196,8 @@ def createSoc(token_dir, registers, soc_pos, lengths, socMTX,
                 if not os.path.exists(focdists_dir):
                     print("Creating directory: ", focdists_dir)
                     os.makedirs(focdists_dir)
-                focdists_fname = f"{focdists_dir}/{modelname}.wwmx.dist.pac"
-                compute_distance(soc_pmi).save(focdists_fname)
+                focdists_fname = f"{focdists_dir}/{modelname}.wwmx.dist.csv"
+                compute_distance(soc_pmi).to_csv(focdists_fname)
             tokvecs = compute_token_vectors(tokens, soc_pmi)
             tokvecs.save(output_name)
     return pd.DataFrame(model_register).transpose()          
