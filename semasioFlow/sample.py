@@ -55,27 +55,3 @@ def sampleTypes(selection, fnames):
             break
             
     return (list(tokens), list(final_files))
-
-def subsetMatrix(mtx, row_items = None, col_items = None):
-    """Subset a matrix making sure all the items are present.
-
-    Parameters
-    ----------
-    mtx : :class:`~qlvl.TypeTokenMatrix`
-    row_items : list, optional
-        The filtered list for the rows. The default is the rows in the matrix.
-    col_items : list, optional
-        The filtered list for the col_items. The default is the columns in the matrix.
-
-    Returns
-    -------
-    :class:`~qlvl.TypeTokenMatrix`
-        A subsetted matrix with the filtered rows and/or columns
-    """
-    row_items = row_items if row_items else mtx.row_items
-    col_items = col_items if col_items else mtx.col_items
-    
-    row_intersect = [x for x in mtx.row_items if x in row_items]
-    col_intersect = [x for x in mtx.col_items if x in col_items]
-    
-    return mtx.submatrix(row = row_intersect, col = col_intersect)

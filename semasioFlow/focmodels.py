@@ -3,13 +3,13 @@ from functools import reduce
 import pandas as pd
 import os.path
 from tqdm import tqdm
+import logging
 
 from qlvl import TokenHandler, TypeTokenMatrix # to generate frequency lists and matrices
 from qlvl.models.deprel import DepRelHandler
 from qlvl.specutils.mxutils import merge_two_matrices
 
 from semasioFlow.utils import booleanize, listCws, countCws
-from semasioFlow.sample import subsetMatrix
 
 def createBow(query, settings, type_name = None,
               fnames = None, foc_win = None, foc_pos = { "all" : []},
@@ -68,7 +68,7 @@ def createBow(query, settings, type_name = None,
     output_dir = output_dir if output_dir else f"{settings['output-path']}/tokens/{type_name}/"
     
     if not os.path.exists(output_dir):
-        print("Creating directory: ", output_dir)
+        logging.info("Creating directory: %s", output_dir)
         os.makedirs(output_dir)
         
     model_register = {}
@@ -83,7 +83,7 @@ def createBow(query, settings, type_name = None,
         for fp, pos_list in foc_pos.items():
             cols = pos_list if len(pos_list) > 0 else tokens.col_items
             rows = tokenlist if tokenlist else tokens.row_items
-            toks = booleanize(subsetMatrix(tokens, rows, cols))
+            toks = booleanize(tokens.submatrix(row = rows, col = cols)).drop(axis = 0, n_nonzero = 0)
             modelname = f"{type_name}.{'no' if not b else ''}bound{w[0]}-{w[1]}{fp}"
             model_register[modelname] = {
                 "foc_base" : "BOW",
@@ -168,7 +168,7 @@ def createRel(query, settings, rel_macros, type_name = None,
     output_dir = output_dir if output_dir else f"{settings['output-path']}/tokens/{type_name}/"
     
     if not os.path.exists(output_dir):
-        print("Creating directory: ", output_dir)
+        logging.info("Creating directory: %s", output_dir)
         os.makedirs(output_dir)
     
     model_register = {}
@@ -178,7 +178,7 @@ def createRel(query, settings, rel_macros, type_name = None,
         rows = tokenlist if tokenlist else tokens.row_items
         cols = foc_filter if foc_filter else tokens.col_items
         
-        toks = booleanize(subsetMatrix(tokens, rows, cols))
+        toks = booleanize(tokens.submatrix(row = rows, col = cols)).drop(axis = 0, n_nonzero = 0)
     
         modelname = f"{type_name}.{rel_name}"
         model_register[modelname] = {
@@ -235,7 +235,7 @@ def createPath(query, settings, path_macros, type_name = None,
     output_dir = output_dir if output_dir else f"{settings['output-path']}/tokens/{type_name}/"
     
     if not os.path.exists(output_dir):
-        print("Creating directory: ", output_dir)
+        logging.info("Creating directory: %s", output_dir)
         os.makedirs(output_dir)
     
     model_register = {}
@@ -254,7 +254,7 @@ def createPath(query, settings, path_macros, type_name = None,
         rows = tokenlist if tokenlist else tokens.row_items
         cols = foc_filter if foc_filter else tokens.col_items
         
-        toks = booleanize(subsetMatrix(tokens, rows, cols))
+        toks = booleanize(tokens.submatrix(row = rows, col = cols)).drop(axis = 0, n_nonzero = 0)
     
         modelname = f"{type_name}.{path_name}"
         model_register[modelname] = {
@@ -265,9 +265,3 @@ def createPath(query, settings, path_macros, type_name = None,
         toks.save(filename)
         
     return pd.DataFrame(model_register).transpose()
-# - The "token_register" element is a Pandas DataFrame with one row per token, and two columns per model.
-#             + Columns starting with "_cws." contain `;`-separated lists of context words captured by the model.
-#             + Columns starting with "_count." contain the number of context words captured by the model.
-        
-
-            

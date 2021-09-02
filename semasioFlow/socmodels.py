@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 from functools import reduce
+import logging
 
 from qlvl import Vocab, TypeTokenMatrix
 from qlvl import compute_association, compute_distance
@@ -48,7 +49,7 @@ def targetPPMI(targets, vocabs, collocs, type_name = None, main_matrix = None, f
     if not output_dir or fname:
         raise ValueError("Please provide `output_dir` or `fname`.")
     if output_dir and not os.path.exists(output_dir):
-        print("Creating directory: ", output_dir)
+        logging.info("Creating directory: %s", output_dir)
         os.makedirs(output_dir)
     if not fname:
         fname = f"{output_dir}/{type_name}.ppmi.tsv"
@@ -72,7 +73,7 @@ def targetPPMI(targets, vocabs, collocs, type_name = None, main_matrix = None, f
         cws[vocab_name] = [subvocab[x] for x in cws.index]
     
     cws.to_csv(fname, sep = '\t', index_label="cw")
-    print(f"Stored with {len(cws.index)} elements at {fname}.")
+    logging.info("Dataframe stored with %s elements at %s.", len(cws.index), fname)
     
     return ppmi
 
@@ -194,7 +195,7 @@ def createSoc(token_dir, registers, soc_pos, lengths, socMTX,
             if store_focdists:
                 focdists_dir = store_focdists if type(store_focdists) == str else output_dir
                 if not os.path.exists(focdists_dir):
-                    print("Creating directory: ", focdists_dir)
+                    logging.info("Creating directory: %s", focdists_dir)
                     os.makedirs(focdists_dir)
                 focdists_fname = f"{focdists_dir}/{modelname}.wwmx.dist.csv"
                 compute_distance(soc_pmi).to_csv(focdists_fname)

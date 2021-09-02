@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 from functools import reduce
+import logging
 
 from qlvl import Vocab, TypeTokenMatrix
 from qlvl import ItemFreqHandler, ColFreqHandler
@@ -27,10 +28,10 @@ def loadVocab(fname, settings, fnames = None):
     If the file does not exist, it creates it and stores it in the filename given.
     """
     if os.path.exists(fname):
-        print("Loading existing vocabulary...")
+        logging.info("Loading existing vocabulary...")
         return Vocab.load(fname, encoding = settings['outfile-encoding'])
     else:
-        print("Creating new vocabulary...")
+        logging.info("Creating new vocabulary...")
         ifhan = ItemFreqHandler(settings = settings)
         vocab = ifhan.build_item_freq(fnames = fnames)
         vocab.save(fname, encoding = settins['outfile-encoding'])
@@ -85,10 +86,10 @@ def loadColloc(fname, settings, fnames = None, row_vocab = None, col_vocab = Non
     If the file does not exist, it creates it and stores it in the filename given.
     """
     if os.path.exists(fname):
-        print("Loading existing collocation matrix...")
+        logging.info("Loading existing collocation matrix...")
         return TypeTokenMatrix.load(fname)
     else:
-        print("Creating new collocation matrix...")
+        logging.info("Creating new collocation matrix...")
         cfhan = ColFreqHandler(settings = settings, row_vocab = row_vocab, col_vocab = col_vocab)
         freqMTX = cfhan.build_col_freq(fnames = fnames)
         freqMTX.save(fname)

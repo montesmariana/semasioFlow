@@ -199,7 +199,7 @@ def drawPath(feature, target, head, dependent, rel, sent,
             path = old_path[0] + "->[" + old_path[1] + "," + d + "]"
     return path
 
-def joinDeps(feature, head, dependent, sent, step_dist = 0, target_lid = None, steps = None):
+def joinDeps(feature, head, dependent, sent, step_dist = 0, target = None, steps = None):
     """Summarize dependency path"""
     rel = sent.edges[(head, dependent)]["deprel"]
     kwargs = {"feature" : feature, "head" : head, "dependent" : dependent, "rel" : rel,
