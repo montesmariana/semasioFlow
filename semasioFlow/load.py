@@ -34,7 +34,7 @@ def loadVocab(fname, settings, fnames = None):
         logging.info("Creating new vocabulary...")
         ifhan = ItemFreqHandler(settings = settings)
         vocab = ifhan.build_item_freq(fnames = fnames)
-        vocab.save(fname, encoding = settins['outfile-encoding'])
+        vocab.save(fname, encoding = settings['outfile-encoding'])
         return vocab
     
 def loadMacro(templates_dir, graphml_name, macro_name):
