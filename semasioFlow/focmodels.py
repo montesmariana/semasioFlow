@@ -21,7 +21,7 @@ def createBow(query, settings, type_name = None,
     
     Parameters
     ----------
-    query : :class:`~qlvl.Vocab`
+    query : :class:`~nephosem.Vocab`
         Types to collect tokens from
     settings : dict
     type_name : str, optional
@@ -102,9 +102,9 @@ def tokensFromMacro(query, macros, settings, fnames = None, weight = 1):
     
     Parameters
     ----------
-    query : :class:`~qlvl.Vocab`
+    query : :class:`~nephosem.Vocab`
         Types to collect tokens from.
-    macros : list of :class:~qlvl.core.graph.MacroGraph
+    macros : list of :class:~nephosem.core.graph.MacroGraph
         Can be obtained with SemasioFlow.load.loadMacro().
     settings : dict
         It MUST include an appropiate 'separator-line-machine' value.
@@ -115,7 +115,7 @@ def tokensFromMacro(query, macros, settings, fnames = None, weight = 1):
         
     Returns
     -------
-    res : :class:`~qlvl.TypeTokenMatrix`
+    res : :class:`~nephosem.TypeTokenMatrix`
         Token level boolean matrix.
     """
     dephan = DepRelHandler(settings, workers=4, targets=query, mode='token')
@@ -131,13 +131,13 @@ def createRel(query, settings, rel_macros, type_name = None,
     
     Parameters
     ----------
-    query : :class:`~qlvl.Vocab`
+    query : :class:`~nephosem.Vocab`
         Types to collect tokens from
     settings : dict
     rel_macros : list of tuples
         Each tuple is a LEMMAREL group.
         The first element of each tuple is its label (for the name of the model).
-        The second element is a list of :class:~qlvl.core.graph.MacroGraph,
+        The second element is a list of :class:~nephosem.core.graph.MacroGraph,
         which can be obtained with SemasioFlow.load.loadMacro().
     type_name : str, optional
         Name of the type, prefix for file names
@@ -197,13 +197,13 @@ def createPath(query, settings, path_macros, type_name = None,
     
     Parameters
     ----------
-    query : :class:`~qlvl.Vocab`
+    query : :class:`~nephosem.Vocab`
         Types to collect tokens from
     settings : dict
     path_macros : list of tuples
         Each tuple is a LEMMAPATH group.
         The first element of each tuple is its label (for the name of the model).
-        The second element is a list of :class:~qlvl.core.graph.MacroGraph,
+        The second element is a list of :class:~nephosem.core.graph.MacroGraph,
         which can be obtained with SemasioFlow.load.loadMacro().
         The third element is a boolean indicating whether the weight of each template.
     type_name : str, optional

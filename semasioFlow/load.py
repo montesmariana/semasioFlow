@@ -21,7 +21,7 @@ def loadVocab(fname, settings, fnames = None):
 
     Returns
     -------
-    vocab : :class:`~qlvl.Vocab`
+    vocab : :class:`~nephosem.Vocab`
 
     Note
     ----
@@ -40,7 +40,7 @@ def loadVocab(fname, settings, fnames = None):
 def loadMacro(templates_dir, graphml_name, macro_name):
     """Load patterns and templates to create dependency-based models.
     
-    The output can be used as `macro` argument for qlvl.depmodel.DepHandler objects.
+    The output can be used as `macro` argument for nephosem.depmodel.DepHandler objects.
 
     Parameters
     ----------
@@ -53,7 +53,7 @@ def loadMacro(templates_dir, graphml_name, macro_name):
 
     Returns
     -------
-    list of :class:`~qlvl.core.graph.MacroGraph`
+    list of :class:`~nephosem.core.graph.MacroGraph`
     """
     graphml_fname = f"{templates_dir}/{graphml_name}.template.graphml"
     patterns = PatternGraph.read_graphml(graphml_fname)
@@ -71,14 +71,14 @@ def loadColloc(fname, settings, fnames = None, row_vocab = None, col_vocab = Non
         Settings for creating the vocabulary and to extract the encoding information.
     fnames : str or list, optional
         Corpus file names
-    row_vocab : :class:`~qlvl.Vocab`, optional
+    row_vocab : :class:`~nephosem.Vocab`, optional
         Vocabulary for the rows of the collocation matrix.
-    col_vocab : :class:`~qlvl.Vocab`, optional
+    col_vocab : :class:`~nephosem.Vocab`, optional
         Vocabulary for the columns of the collocation matrix.
 
     Returns
     -------
-    freqMTX : :class:`~qlvl.TypeTokenMatrix`
+    freqMTX : :class:`~nephosem.TypeTokenMatrix`
         Type-level co-occurrence matrix matrix.
 
     Note

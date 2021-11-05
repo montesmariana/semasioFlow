@@ -12,13 +12,13 @@ def booleanize(mtx, include_negative = True):
 
     Parameters
     ----------
-    mtx : :class:`~qlvl.TypeTokenMatrix`
+    mtx : :class:`~nephosem.TypeTokenMatrix`
     include_negative : bool
         Whether negative values should be transformed to 1's.
 
     Returns
     -------
-    :class:`~qlvl.TypeTokenMatrix`
+    :class:`~nephosem.TypeTokenMatrix`
     """
     # For PPMI matrices, include_negative should be False
     boolean_array = mtx.matrix.toarray() != 0 if include_negative else mtx.matrix.toarray() > 0
@@ -30,7 +30,7 @@ def listCws(tokens):
 
     Parameters
     ----------
-    tokens : :class:`~qlvl.TypeTokenMatrix`
+    tokens : :class:`~nephosem.TypeTokenMatrix`
         (Boolean) token-level matrix to count context words from
     
     Returns
@@ -45,7 +45,7 @@ def countCws(tokens):
 
     Parameters
     ----------
-    tokens : :class:`~qlvl.TypeTokenMatrix`
+    tokens : :class:`~nephosem.TypeTokenMatrix`
         (Boolean) token-level matrix to count context words from
     
     Returns
@@ -60,7 +60,7 @@ def plotPatterns(macros):
 
     Parameters
     ----------
-    macros : list of :class:~qlvl.core.graph.MacroGraph
+    macros : list of :class:~nephosem.core.graph.MacroGraph
         Can be obtained with SemasioFlow.load.loadMacro().
     
     """    

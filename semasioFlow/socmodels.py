@@ -22,11 +22,11 @@ def targetPPMI(targets, vocabs, collocs, type_name = None, main_matrix = None, f
         Lemma(s) for the target(s)
     vocabs : dict
         Vocabularies to extract raw frequency information from; the keys are their names
-        and the values are :class:`~qlvl.Vocab`.
+        and the values are :class:`~nephosem.Vocab`.
     collocs : dict
         Frequency matrices to extract raw co-occurrence frequency and PPMI information from;
         the keys are their names
-        and the values are :class:`~qlvl.TypeTokenMatrix`.
+        and the values are :class:`~nephosem.TypeTokenMatrix`.
     type_name : str, optional
         Name of the type, prefix for file names.
     main_matrix : str, optional
@@ -38,7 +38,7 @@ def targetPPMI(targets, vocabs, collocs, type_name = None, main_matrix = None, f
        
     Returns
     -------
-    ppmi : :class:`~qlvl.TypeTokenMatrix`
+    ppmi : :class:`~nephosem.TypeTokenMatrix`
         Type-level co-occurrence matrix with target type(s) as row(s) and PPMI values
         based the values in `collocs`[`main_matrix`].
     """
@@ -89,7 +89,7 @@ def weightTokens(token_dir, weighting, registers, output_dir = None,
         Path to the directory where the boolean matrices are stored.
     weighting : dict
         Keys are the names of the PPMI parameter values; values are the matrices to use for weighting,
-        (`~qlvl.TypeTokenMatrix`) or `None`.
+        (`~nephosem.TypeTokenMatrix`) or `None`.
     register : :class:`pandas.DataFrame`
         Register of model information, with names of the models in the index.
     output_dir : str, optional
@@ -151,7 +151,7 @@ def createSoc(token_dir, registers, soc_pos, lengths, socMTX,
     register : :class:`pandas.DataFrame`
         Register of model information, with names of the models in the index.
     soc_pos : dict
-        The keys are the names of the "SOC-POS" values, the values are filtered `~qlvl.Vocab` objects.
+        The keys are the names of the "SOC-POS" values, the values are filtered `~nephosem.Vocab` objects.
     length : list
         Integer elements will be used to select the `length` most frequent elements in the `soc_pos` lists,
         while other kinds of elements will trigger using the FOC items as SOC items.
