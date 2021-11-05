@@ -3,8 +3,8 @@ from tqdm import tqdm
 from pathlib import Path
 import pandas as pd
 
-from qlvl import CorpusFormatter
-from qlvl.core.graph import SentenceGraph
+from nephosem import CorpusFormatter
+from nephosem.core.graph import SentenceGraph
 
 def sameSentence(here, target, delimiters):
     """Determine whether two tokens are in the same sentence.
@@ -128,7 +128,7 @@ def findLabel(target_lid, cw_lid, sent, goal, explicit):
         Index of target token.
     cw_lid : int
         Index of context token to add to the path.
-    sent : :class:`~qlvl.SentenceGraph`
+    sent : :class:`~nephosem.SentenceGraph`
         Sentence
     goal : int
         Index of the item we want to replace
@@ -165,7 +165,7 @@ def drawPath(feature, target, head, dependent, rel, sent,
         Index of the dependent of the path
     rel : :class: `nx.Graph.edge`
         Relationship between the head and the dependent
-    sent : :class: `~qlvl.SentenceGraph`
+    sent : :class: `~nephosem.SentenceGraph`
     steps : list of dict
         List of parent and dependent relations
     explicit : bool, default=False
@@ -217,7 +217,7 @@ def getIdx(line, formatter):
     Parameters
     ----------
     line : str
-    formater : :class: `~qlvl.CorpusFormatter`
+    formater : :class: `~nephosem.CorpusFormatter`
     
     Returns
     -------
@@ -236,7 +236,7 @@ def getSteps(text, target_idx, formatter):
         Lines of the corpus
     target_idx : int
         Index of target token
-    formatter : :class:`~qlvl.CorpusFormatter`
+    formatter : :class:`~nephosem.CorpusFormatter`
     
     Returns
     -------

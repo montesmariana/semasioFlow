@@ -3,9 +3,9 @@ import pandas as pd
 from functools import reduce
 import logging
 
-from qlvl import Vocab, TypeTokenMatrix
-from qlvl import ItemFreqHandler, ColFreqHandler
-from qlvl.core.graph import MacroGraph, PatternGraph
+from nephosem import Vocab, TypeTokenMatrix
+from nephosem import ItemFreqHandler, ColFreqHandler
+from nephosem.core.graph import MacroGraph, PatternGraph
 
 def loadVocab(fname, settings, fnames = None):
     """Load an existing vocabulary or create one.

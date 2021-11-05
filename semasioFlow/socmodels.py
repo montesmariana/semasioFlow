@@ -3,9 +3,9 @@ import pandas as pd
 from functools import reduce
 import logging
 
-from qlvl import Vocab, TypeTokenMatrix
-from qlvl import compute_association, compute_distance
-from qlvl.specutils.mxcalc import compute_token_weights, compute_token_vectors
+from nephosem import Vocab, TypeTokenMatrix
+from nephosem import compute_association, compute_distance
+from nephosem.specutils.mxcalc import compute_token_weights, compute_token_vectors
 
 from semasioFlow.utils import fullMerge
 from semasioFlow.utils import listCws, countCws

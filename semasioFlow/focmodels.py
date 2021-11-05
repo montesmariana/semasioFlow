@@ -5,9 +5,9 @@ import os.path
 from tqdm import tqdm
 import logging
 
-from qlvl import TokenHandler, TypeTokenMatrix # to generate frequency lists and matrices
-from qlvl.models.deprel import DepRelHandler
-from qlvl.specutils.mxutils import merge_two_matrices
+from nephosem import TokenHandler, TypeTokenMatrix # to generate frequency lists and matrices
+from nephosem.models.deprel import DepRelHandler
+from nephosem.specutils.mxutils import merge_two_matrices
 
 from semasioFlow.utils import booleanize, listCws, countCws
 

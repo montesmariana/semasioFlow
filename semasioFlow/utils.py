@@ -3,8 +3,8 @@ from scipy import sparse
 import matplotlib.pyplot as plt
 import pandas as pd
 
-from qlvl import TypeTokenMatrix
-from qlvl.specutils.deputils import parse_pattern, draw_tree, draw_match, draw_labels, get_root
+from nephosem import TypeTokenMatrix
+from nephosem.specutils.deputils import parse_pattern, draw_tree, draw_match, draw_labels, get_root
 
 
 def booleanize(mtx, include_negative = True):
