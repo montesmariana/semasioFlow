@@ -60,7 +60,7 @@ def loadMacro(templates_dir, graphml_name, macro_name):
     macro_fname = f"{templates_dir}/{macro_name}.target-feature-macro.xml"
     return MacroGraph.read_xml(macro_fname, patterns)
 
-def loadColloc(fname, settings, fnames = None, row_vocab = None, col_vocab = None):
+def loadColloc(fname, settings, row_vocab = None, fnames = None, col_vocab = None):
     """Load an existing vocabulary or create one.
 
     Parameters
@@ -71,7 +71,7 @@ def loadColloc(fname, settings, fnames = None, row_vocab = None, col_vocab = Non
         Settings for creating the vocabulary and to extract the encoding information.
     fnames : str or list, optional
         Corpus file names
-    row_vocab : :class:`~nephosem.Vocab`, optional
+    row_vocab : :class:`~nephosem.Vocab`, optional if fname exists
         Vocabulary for the rows of the collocation matrix.
     col_vocab : :class:`~nephosem.Vocab`, optional
         Vocabulary for the columns of the collocation matrix.
@@ -89,6 +89,9 @@ def loadColloc(fname, settings, fnames = None, row_vocab = None, col_vocab = Non
         logging.info("Loading existing collocation matrix...")
         return TypeTokenMatrix.load(fname)
     else:
+        if row_vocab is None:
+            logging.error("You need to specify a row vocabulary to create a new matrix")
+            return
         logging.info("Creating new collocation matrix...")
         cfhan = ColFreqHandler(settings = settings, row_vocab = row_vocab, col_vocab = col_vocab)
         freqMTX = cfhan.build_col_freq(fnames = fnames)
