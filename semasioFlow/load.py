@@ -60,7 +60,7 @@ def loadMacro(templates_dir, graphml_name, macro_name):
     macro_fname = f"{templates_dir}/{macro_name}.target-feature-macro.xml"
     return MacroGraph.read_xml(macro_fname, patterns)
 
-def loadColloc(fname, settings, fnames = None, row_vocab = None, col_vocab = None):
+def loadColloc(fname, settings, row_vocab, fnames = None, col_vocab = None):
     """Load an existing vocabulary or create one.
 
     Parameters
@@ -71,7 +71,7 @@ def loadColloc(fname, settings, fnames = None, row_vocab = None, col_vocab = Non
         Settings for creating the vocabulary and to extract the encoding information.
     fnames : str or list, optional
         Corpus file names
-    row_vocab : :class:`~nephosem.Vocab`, optional
+    row_vocab : :class:`~nephosem.Vocab`
         Vocabulary for the rows of the collocation matrix.
     col_vocab : :class:`~nephosem.Vocab`, optional
         Vocabulary for the columns of the collocation matrix.
