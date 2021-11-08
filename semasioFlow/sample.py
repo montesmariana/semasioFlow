@@ -2,22 +2,28 @@ from pathlib import Path
 import random
 import numpy as np
 from tqdm import tqdm
+import re
 
-def sampleTypes(selection, fnames):
+from nephosem import CorpusFormatter
+
+def sampleTypes(selection, fnames, settings):
     """Generate a random sample of tokens and the list of files required to extract them.
 
     Parameters
     ----------
     selection : dict
         Types to look for as keys, number of tokens to extract from each of them as values.
-    settings : str or list
+    filenames : str or list
         Selection of filenames to search: either the path to the file with the list, as a string, or the list itself.
+    settings : dict
+        Configuration settings as designed from the `nephosem` workflow.
 
     Returns
     -------
     tuple
         A list of token IDs and the list of files where they can be found. Not separated by type.
     """
+    formatter = CorpusFormatter(settings)
     if type(fnames) == str:
         with open(fnames, "r") as f:
             fnames = [s.strip() for s in f.readlines()]
@@ -34,12 +40,11 @@ def sampleTypes(selection, fnames):
         if sum(selection.values()) > 0:
             with Path(file).open() as f:
                 try:
-                    txt = f.readlines()
+                    txt = [x.strip() for x in f.readlines()]
                 except:
                     continue
-            """TODO make it flexible adapting to settings like the original code does?"""
-            txt = [f"{str(i+1)}\t{x}".split("\t") for i, x in enumerate(txt) if len(x.split("\t")) >= 4]
-            findings = { target_type : [x[0] for x in txt if f"{x[3]}/{x[4]}" == target_type]
+            txt = [(str(i+1), x) for i, x in enumerate(txt) if re.match(settings['line-machine'], x)]
+            findings = { target_type : [x[0] for x in txt if formatter.get_type(formatter.match_line(x[1])) == target_type]
                         for target_type in selection.keys()
                        if selection[target_type] > 0}
             if len(findings) > 0:
