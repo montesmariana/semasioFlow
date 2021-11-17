@@ -61,7 +61,6 @@ def listContextwords(type_name, tokenlist, fnames, settings, left_win = None, ri
     
     formatter = CorpusFormatter(settings)
     text_variables = formatter.global_columns
-    line_machine = formatter.line_machine
     useDep = formatter.edge_attr in text_variables
     cws = {}
     basic_dict = {'target_lemma' : type_name}
@@ -76,7 +75,7 @@ def listContextwords(type_name, tokenlist, fnames, settings, left_win = None, ri
             tokendict = basic_dict.copy()
             tokendict.update({'token_id' : tokid})
             span = range(max(0, index-left_win), min(index+right_win, len(lines)))
-            not_text_lines = [i for i in span if not re.match(line_machine, lines[i])]
+            not_text_lines = [i for i in span if not formatter.match_line(lines[i])]
             if useDep:
                 steps = {str(x['this']) : x for x in getSteps(lines, index, formatter)}
 
@@ -95,9 +94,10 @@ def listContextwords(type_name, tokenlist, fnames, settings, left_win = None, ri
                     'side' : side,
                     'position' : position
                 })
-                match = re.match(line_machine, lines[i])
+                match = formatter.match_line(lines[i])
                 if match:
                     text_values = {k:v for k, v in zip(text_variables, match.groups())}
+                    text_values['cw'] = formatter.get_type(match)
                     ss = sameSentence(i, index, not_text_lines)
                     text_values['same_sentence'] = ss
                     matchdict = cwdict.copy()
