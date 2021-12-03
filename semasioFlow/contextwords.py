@@ -68,7 +68,7 @@ def listContextwords(type_name, tokenlist, fnames, settings, left_win = None, ri
     for file in tqdm(fnames):
         tokens = [(int(tokid.split('/')[3])-1, tokid)
                   for tokid in tokenlist if tokid.split("/")[2] == Path(file).stem]
-        with open(file, 'r', encoding = 'latin-1') as f:
+        with open(file, 'r', encoding = settings['file-encoding']) as f:
             lines = [s.strip() for s in f.readlines()]
             
         for index, tokid in tokens:
