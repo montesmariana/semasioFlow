@@ -123,7 +123,8 @@ def weightTokens(token_dir, weighting, registers, output_dir = None,
                 intersected = list(set(tokens.col_items).intersection(set(weightMTX.col_items)))
                 tokweights = compute_token_weights(
                     tokens.submatrix(col = intersected),
-                    weightMTX.submatrix(col = intersected)
+                    weightMTX.submatrix(col = intersected),
+                    booleanize = False
                 ).drop(axis = 0, n_nonzero = 0)
             tokweights.save(output_name)
             model_register[modelname]['tokens'] = len(tokweights.row_items)
