@@ -245,6 +245,7 @@ def createPath(query, settings, path_macros, type_name = None,
         return merge_two_matrices(mat1.submatrix(row = shared_tokens), mat2.submatrix(row = shared_tokens))
     
     for path_name, macros, weights in path_macros:
+        raw_values = weights is None
         weights = weights if weights else [1 for _ in range(len(macros))]
         token_matrices = [
             tokensFromMacro(query, macro, settings, fnames, weight)
@@ -254,7 +255,8 @@ def createPath(query, settings, path_macros, type_name = None,
         rows = tokenlist if tokenlist else tokens.row_items
         cols = foc_filter if foc_filter else tokens.col_items
         
-        toks = booleanize(tokens.submatrix(row = rows, col = cols)).drop(axis = 0, n_nonzero = 0)
+        toks = tokens.submatrix(row = rows, col = cols).drop(axis = 1)
+        toks = booleanize(toks) if raw_values else toks
     
         modelname = f"{type_name}.{path_name}"
         model_register[modelname] = {
