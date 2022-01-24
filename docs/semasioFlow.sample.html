@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>semasioFlow package &mdash; semasioFlow 0.1.0 documentation</title>
+  <title>semasioFlow.sample module &mdash; semasioFlow 0.1.0 documentation</title>
   
 
   
@@ -44,8 +44,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="semasioFlow.contextwords module" href="semasioFlow.contextwords.html" />
-    <link rel="prev" title="Usage" href="usage.html" /> 
+    <link rel="next" title="semasioFlow.socmodels module" href="semasioFlow.socmodels.html" />
+    <link rel="prev" title="semasioFlow.load module" href="semasioFlow.load.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,17 +93,17 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="semasioFlow.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="semasioFlow.html#submodules">Submodules</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="semasioFlow.contextwords.html">semasioFlow.contextwords module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="semasioFlow.focmodels.html">semasioFlow.focmodels module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="semasioFlow.load.html">semasioFlow.load module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="semasioFlow.sample.html">semasioFlow.sample module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">semasioFlow.sample module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="semasioFlow.socmodels.html">semasioFlow.socmodels module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="semasioFlow.utils.html">semasioFlow.utils module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#module-semasioFlow">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="semasioFlow.html#module-semasioFlow">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
@@ -157,13 +157,15 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>semasioFlow package</li>
+          <li><a href="semasioFlow.html">semasioFlow package</a> &raquo;</li>
+        
+      <li>semasioFlow.sample module</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/semasioFlow.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/semasioFlow.sample.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -200,24 +202,31 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="semasioflow-package">
-<h1>semasioFlow package<a class="headerlink" href="#semasioflow-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="semasioFlow.contextwords.html">semasioFlow.contextwords module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="semasioFlow.focmodels.html">semasioFlow.focmodels module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="semasioFlow.load.html">semasioFlow.load module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="semasioFlow.sample.html">semasioFlow.sample module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="semasioFlow.socmodels.html">semasioFlow.socmodels module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="semasioFlow.utils.html">semasioFlow.utils module</a></li>
+<div class="section" id="module-semasioFlow.sample">
+<span id="semasioflow-sample-module"></span><h1>semasioFlow.sample module<a class="headerlink" href="#module-semasioFlow.sample" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="semasioFlow.sample.sampleTypes">
+<span class="sig-prename descclassname"><span class="pre">semasioFlow.sample.</span></span><span class="sig-name descname"><span class="pre">sampleTypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">settings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oneperfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concordance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#semasioFlow.sample.sampleTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a random sample of tokens and the list of files required to extract them.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>selection</strong> (<em>dict</em>) – Types to look for as keys, number of tokens to extract from each of them as values.</p></li>
+<li><p><strong>filenames</strong> (<em>str</em><em> or </em><em>list</em>) – Selection of filenames to search: either the path to the file with the list, as a string, or the list itself.</p></li>
+<li><p><strong>settings</strong> (<em>dict</em>) – Configuration settings as designed from the <cite>nephosem</cite> workflow.</p></li>
+<li><p><strong>oneperfile</strong> (<em>bool</em>) – Whether only one token of each lemma can be extracted from the same file.</p></li>
+<li><p><strong>concordance</strong> (<em>str</em>) – File name to store concordance. If <cite>None</cite>, then no concordance is generated.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="module-semasioFlow">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-semasioFlow" title="Permalink to this headline">¶</a></h2>
-</div>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of token IDs and the list of files where they can be found. Not separated by type.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
@@ -226,8 +235,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="semasioFlow.contextwords.html" class="btn btn-neutral float-right" title="semasioFlow.contextwords module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="usage.html" class="btn btn-neutral float-left" title="Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="semasioFlow.socmodels.html" class="btn btn-neutral float-right" title="semasioFlow.socmodels module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="semasioFlow.load.html" class="btn btn-neutral float-left" title="semasioFlow.load module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

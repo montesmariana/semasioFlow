@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>semasioFlow.socmodels module &mdash; semasioFlow 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="semasioFlow.utils module" href="semasioFlow.utils.html" />
+    <link rel="prev" title="semasioFlow.sample module" href="semasioFlow.sample.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> semasioFlow
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="semasioFlow.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="semasioFlow.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="semasioFlow.contextwords.html">semasioFlow.contextwords module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="semasioFlow.focmodels.html">semasioFlow.focmodels module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="semasioFlow.load.html">semasioFlow.load module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="semasioFlow.sample.html">semasioFlow.sample module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">semasioFlow.socmodels module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="semasioFlow.utils.html">semasioFlow.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="semasioFlow.html#module-semasioFlow">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/montesmariana/semasioFlow/">Repository</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://montesmariana.github.io/semcloud/">semcloud</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">semasioFlow</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="semasioFlow.html">semasioFlow package</a> &raquo;</li>
+        
+      <li>semasioFlow.socmodels module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/semasioFlow.socmodels.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-semasioFlow.socmodels">
+<span id="semasioflow-socmodels-module"></span><h1>semasioFlow.socmodels module<a class="headerlink" href="#module-semasioFlow.socmodels" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="semasioFlow.socmodels.createSoc">
+<span class="sig-prename descclassname"><span class="pre">semasioFlow.socmodels.</span></span><span class="sig-name descname"><span class="pre">createSoc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">registers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">soc_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lengths</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">socMTX</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.tcmx.weight.pac'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.tcmx.soc.pac'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store_focdists</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#semasioFlow.socmodels.createSoc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiply token-by-feature matrix by its second-order matrix.</p>
+<p>It does store the matrices too.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>token_dir</strong> (<em>str</em>) – Path to the directory where the boolean matrices are stored.</p></li>
+<li><p><strong>register</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code>) – Register of model information, with names of the models in the index.</p></li>
+<li><p><strong>soc_pos</strong> (<em>dict</em>) – The keys are the names of the “SOC-POS” values, the values are filtered <cite>~nephosem.Vocab</cite> objects.</p></li>
+<li><p><strong>length</strong> (<em>list</em>) – Integer elements will be used to select the <cite>length</cite> most frequent elements in the <cite>soc_pos</cite> lists,
+while other kinds of elements will trigger using the FOC items as SOC items.</p></li>
+<li><p><strong>output_dir</strong> (<em>str</em><em>, </em><em>optional</em>) – Directory where the matrices will be stored. Defaults to <cite>token_dir</cite>.</p></li>
+<li><p><strong>input_suffix</strong> (<em>str</em><em>, </em><em>default=&quot;.tcmx.weight.pac&quot;</em>) – Suffix of the filenames to load.</p></li>
+<li><p><strong>output_suffix</strong> (<em>str</em><em>, </em><em>default=&quot;.tcmx.soc.pac&quot;</em>) – Suffix of the filenames to save.</p></li>
+<li><p><strong>store_focdists</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>default=False</em>) – Whether to store the context-word distance matrix. If False, it doesn’t;
+if True, it stores them in <cite>output_dir</cite>; if it’s a string, it is taken to be the directory to store them in.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A register with one row per model and all the parameter settings as columns.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict of pandas.dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="semasioFlow.socmodels.targetPPMI">
+<span class="sig-prename descclassname"><span class="pre">semasioFlow.socmodels.</span></span><span class="sig-name descname"><span class="pre">targetPPMI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vocabs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collocs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">main_matrix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#semasioFlow.socmodels.targetPPMI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registers PPMI values of a target lemma(s) with all possible context words.</p>
+<p>Computes PPMI values between target lemma(s) and context words, for weighting.
+It also stores PMI values, raw frequencies and raw co-occurrences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> (<em>list of str</em>) – Lemma(s) for the target(s)</p></li>
+<li><p><strong>vocabs</strong> (<em>dict</em>) – Vocabularies to extract raw frequency information from; the keys are their names
+and the values are <code class="xref py py-class docutils literal notranslate"><span class="pre">Vocab</span></code>.</p></li>
+<li><p><strong>collocs</strong> (<em>dict</em>) – Frequency matrices to extract raw co-occurrence frequency and PPMI information from;
+the keys are their names
+and the values are <code class="xref py py-class docutils literal notranslate"><span class="pre">TypeTokenMatrix</span></code>.</p></li>
+<li><p><strong>type_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the type, prefix for file names.</p></li>
+<li><p><strong>main_matrix</strong> (<em>str</em><em>, </em><em>optional</em>) – Key in <cite>collocs</cite> indicating the matrix used for the weighting of the matrix to return.</p></li>
+<li><p><strong>fname</strong> (<em>str</em><em>, </em><em>optional</em>) – Filename to store the frequency data in. By default it combines <cite>type_name</cite> with “ppmi.tsv”.</p></li>
+<li><p><strong>str</strong> (<em>output_dir =</em>) – Directory where the matrices will be stored. It is necessary if a <cite>fname</cite> is not provided`.</p></li>
+<li><p><strong>optional</strong> – Directory where the matrices will be stored. It is necessary if a <cite>fname</cite> is not provided`.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ppmi</strong> – Type-level co-occurrence matrix with target type(s) as row(s) and PPMI values
+based the values in <cite>collocs`[`main_matrix</cite>].</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeTokenMatrix</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="semasioFlow.socmodels.weightTokens">
+<span class="sig-prename descclassname"><span class="pre">semasioFlow.socmodels.</span></span><span class="sig-name descname"><span class="pre">weightTokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weighting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">registers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.tcmx.bool.pac'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.tcmx.weight.pac'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#semasioFlow.socmodels.weightTokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply (or not) weighting to all current token-level matrices across multiple weighting values.</p>
+<p>It does store the matrices too.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>token_dir</strong> (<em>str</em>) – Path to the directory where the boolean matrices are stored.</p></li>
+<li><p><strong>weighting</strong> (<em>dict</em>) – Keys are the names of the PPMI parameter values; values are the matrices to use for weighting,
+(<cite>~nephosem.TypeTokenMatrix</cite>) or <cite>None</cite>.</p></li>
+<li><p><strong>register</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code>) – Register of model information, with names of the models in the index.</p></li>
+<li><p><strong>output_dir</strong> (<em>str</em><em>, </em><em>optional</em>) – Directory where the matrices will be stored. Defaults to <cite>token_dir</cite>.</p></li>
+<li><p><strong>input_suffix</strong> (<em>str</em><em>, </em><em>default=&quot;.tcmx.bool.pac&quot;</em>) – Suffix of the filenames to load.</p></li>
+<li><p><strong>output_suffix</strong> (<em>str</em><em>, </em><em>default=&quot;.tcmx.weight.pac&quot;</em>) – Suffix of the filenames to save.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>data</strong> – A “model_register” dataframe with one row per model and the parameter settings as columns
+and a “token_register” dataframe with one row per token and the number and lists of context words as columns.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict of pandas.dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="semasioFlow.utils.html" class="btn btn-neutral float-right" title="semasioFlow.utils module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="semasioFlow.sample.html" class="btn btn-neutral float-left" title="semasioFlow.sample module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Mariana Montes.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

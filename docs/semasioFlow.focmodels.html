@@ -1,0 +1,406 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>semasioFlow.focmodels module &mdash; semasioFlow 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="semasioFlow.load module" href="semasioFlow.load.html" />
+    <link rel="prev" title="semasioFlow.contextwords module" href="semasioFlow.contextwords.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> semasioFlow
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="semasioFlow.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="semasioFlow.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="semasioFlow.contextwords.html">semasioFlow.contextwords module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">semasioFlow.focmodels module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="semasioFlow.load.html">semasioFlow.load module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="semasioFlow.sample.html">semasioFlow.sample module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="semasioFlow.socmodels.html">semasioFlow.socmodels module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="semasioFlow.utils.html">semasioFlow.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="semasioFlow.html#module-semasioFlow">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/montesmariana/semasioFlow/">Repository</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://montesmariana.github.io/semcloud/">semcloud</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">semasioFlow</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="semasioFlow.html">semasioFlow package</a> &raquo;</li>
+        
+      <li>semasioFlow.focmodels module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/semasioFlow.focmodels.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-semasioFlow.focmodels">
+<span id="semasioflow-focmodels-module"></span><h1>semasioFlow.focmodels module<a class="headerlink" href="#module-semasioFlow.focmodels" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="semasioFlow.focmodels.createBow">
+<span class="sig-prename descclassname"><span class="pre">semasioFlow.focmodels.</span></span><span class="sig-name descname"><span class="pre">createBow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">settings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">foc_win</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">foc_pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'all':</span> <span class="pre">[]}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'match':</span> <span class="pre">'&lt;artikel&gt;',</span> <span class="pre">'values':</span> <span class="pre">[False]}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dummy_sentbound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;artikel&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.tcmx.bool.pac'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#semasioFlow.focmodels.createBow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create multiple bag-of-words token-level models on a loop.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Vocab</span></code>) – Types to collect tokens from</p></li>
+<li><p><strong>settings</strong> (<em>dict</em>) – </p></li>
+<li><p><strong>type_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the type, prefix for file names</p></li>
+<li><p><strong>fnames</strong> (<em>str</em><em> or </em><em>list</em><em>, </em><em>optional</em>) – Path to list of filenames or list of filenames to search tokens in.
+Default is the full corpus.</p></li>
+<li><p><strong>foc_win</strong> (<em>list of tuples</em><em>, </em><em>optional</em>) – List of window size settings; each tuple is one setting indicating left and right spans correspondingly.
+The default value is the one in the settings.</p></li>
+<li><p><strong>foc_pos</strong> (<em>dict</em><em>, </em><em>optional</em>) – The keys are the labels of the part-of-speech settings and the values
+are lists of context words to filter the matrix.
+The default value is “all”, with no filters.</p></li>
+<li><p><strong>bound</strong> (<em>dict</em><em>, </em><em>optional</em>) – The <cite>match</cite> value indicates the regex for the sentence boundary and
+a list of boolean values indicating whether it is respected.
+The default is with <cite>“&lt;artikel&gt;”</cite> as regex and no consideration for sentence boundaries.</p></li>
+<li><p><strong>tokenlist</strong> (<em>list</em><em>, </em><em>optional</em>) – List of token ID’s to filter the matrix. By default, the rows are not filtered.</p></li>
+<li><p><strong>dummy_sentbound</strong> (<em>str</em><em>, </em><em>default=&quot;&lt;artikel&gt;&quot;</em>) – String that will not match anything relevant in the corpus
+and therefore cancels sentence boundaries.</p></li>
+<li><p><strong>suffix</strong> (<em>str</em><em>, </em><em>default=&quot;.ttmx.pos.pac&quot;</em>) – Suffix for the filenames of the position matrices.</p></li>
+<li><p><strong>str</strong> (<em>output_dir =</em>) – Directory where the matrices will be stored.
+By default it’s a subdirectory <cite>type_name</cite> within the subdirectry “tokens”
+within <cite>settings[‘output-path’]</cite>. If the directory does not exist it will be created.</p></li>
+<li><p><strong>optional</strong> – Directory where the matrices will be stored.
+By default it’s a subdirectory <cite>type_name</cite> within the subdirectry “tokens”
+within <cite>settings[‘output-path’]</cite>. If the directory does not exist it will be created.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Register of model parameters: it has one row per model and the parameter settings as columns.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As a secondary effect, the function stores all the token-by-feature boolean matrices.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="semasioFlow.focmodels.createPath">
+<span class="sig-prename descclassname"><span class="pre">semasioFlow.focmodels.</span></span><span class="sig-name descname"><span class="pre">createPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">settings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_macros</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">foc_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.tcmx.bool.pac'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#semasioFlow.focmodels.createPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create multiple PATH token-level models on a loop.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Vocab</span></code>) – Types to collect tokens from</p></li>
+<li><p><strong>settings</strong> (<em>dict</em>) – </p></li>
+<li><p><strong>path_macros</strong> (<em>list of tuples</em>) – Each tuple is a LEMMAPATH group.
+The first element of each tuple is its label (for the name of the model).
+The second element is a list of :class:~nephosem.core.graph.MacroGraph,
+which can be obtained with SemasioFlow.load.loadMacro().
+The third element is a boolean indicating whether the weight of each template.</p></li>
+<li><p><strong>type_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the type, prefix for file names</p></li>
+<li><p><strong>fnames</strong> (<em>str</em><em> or </em><em>list</em><em>, </em><em>optional</em>) – Path to list of filenames or list of filenames to search tokens in.
+Default is the full corpus.</p></li>
+<li><p><strong>tokenlist</strong> (<em>list</em><em>, </em><em>optional</em>) – List of token ID’s to filter the matrix. By default, the rows are not filtered.</p></li>
+<li><p><strong>foc_filter</strong> (<em>list</em><em>, </em><em>optional</em>) – List of context words to filter the matrix. By default, the columns are not filtered.</p></li>
+<li><p><strong>suffix</strong> (<em>str</em><em>, </em><em>default=&quot;.ttmx.pos.pac&quot;</em>) – Suffix for the filenames of the position matrices.</p></li>
+<li><p><strong>str</strong> (<em>output_dir =</em>) – Directory where the matrices will be stored.
+By default it’s a subdirectory <cite>type_name</cite> within the subdirectry “tokens”
+within <cite>settings[‘output-path’]</cite>. If the directory does not exist it will be created.</p></li>
+<li><p><strong>optional</strong> – Directory where the matrices will be stored.
+By default it’s a subdirectory <cite>type_name</cite> within the subdirectry “tokens”
+within <cite>settings[‘output-path’]</cite>. If the directory does not exist it will be created.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Register of model parameters: it has one row per model and the parameter settings as columns.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As a secondary effect, the function stores all the token-by-feature boolean matrices.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="semasioFlow.focmodels.createRel">
+<span class="sig-prename descclassname"><span class="pre">semasioFlow.focmodels.</span></span><span class="sig-name descname"><span class="pre">createRel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">settings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rel_macros</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">foc_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.tcmx.bool.pac'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#semasioFlow.focmodels.createRel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create multiple LEMMAREL token-level models on a loop.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Vocab</span></code>) – Types to collect tokens from</p></li>
+<li><p><strong>settings</strong> (<em>dict</em>) – </p></li>
+<li><p><strong>rel_macros</strong> (<em>list of tuples</em>) – Each tuple is a LEMMAREL group.
+The first element of each tuple is its label (for the name of the model).
+The second element is a list of :class:~nephosem.core.graph.MacroGraph,
+which can be obtained with SemasioFlow.load.loadMacro().</p></li>
+<li><p><strong>type_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the type, prefix for file names</p></li>
+<li><p><strong>fnames</strong> (<em>str</em><em> or </em><em>list</em><em>, </em><em>optional</em>) – Path to list of filenames or list of filenames to search tokens in.
+Default is the full corpus.</p></li>
+<li><p><strong>tokenlist</strong> (<em>list</em><em>, </em><em>optional</em>) – List of token ID’s to filter the matrix. By default, the rows are not filtered.</p></li>
+<li><p><strong>foc_filter</strong> (<em>list</em><em>, </em><em>optional</em>) – List of context words to filter the matrix. By default, the columns are not filtered.</p></li>
+<li><p><strong>suffix</strong> (<em>str</em><em>, </em><em>default=&quot;.ttmx.pos.pac&quot;</em>) – Suffix for the filenames of the position matrices.</p></li>
+<li><p><strong>str</strong> (<em>output_dir =</em>) – Directory where the matrices will be stored.
+By default it’s a subdirectory <cite>type_name</cite> within the subdirectry “tokens”
+within <cite>settings[‘output-path’]</cite>. If the directory does not exist it will be created.</p></li>
+<li><p><strong>optional</strong> – Directory where the matrices will be stored.
+By default it’s a subdirectory <cite>type_name</cite> within the subdirectry “tokens”
+within <cite>settings[‘output-path’]</cite>. If the directory does not exist it will be created.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Register of model parameters: it has one row per model and the parameter settings as columns.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As a secondary effect, the function stores all the token-by-feature boolean matrices.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="semasioFlow.focmodels.tokensFromMacro">
+<span class="sig-prename descclassname"><span class="pre">semasioFlow.focmodels.</span></span><span class="sig-name descname"><span class="pre">tokensFromMacro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">macros</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">settings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#semasioFlow.focmodels.tokensFromMacro" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain dependency-based token-level model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Vocab</span></code>) – Types to collect tokens from.</p></li>
+<li><p><strong>macros</strong> (<em>list of :class:~nephosem.core.graph.MacroGraph</em>) – Can be obtained with SemasioFlow.load.loadMacro().</p></li>
+<li><p><strong>settings</strong> (<em>dict</em>) – It MUST include an appropiate ‘separator-line-machine’ value.</p></li>
+<li><p><strong>fnames</strong> (<em>str</em><em> or </em><em>list</em><em>, </em><em>optional</em>) – Path to list of filenames or list of filenames to search tokens in. Default is the full corpus.</p></li>
+<li><p><strong>weight</strong> (<em>int</em><em>, </em><em>default=1</em>) – Constant to multiply the values for (for weighting mechanisms).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>res</strong> – Token level boolean matrix.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeTokenMatrix</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="semasioFlow.load.html" class="btn btn-neutral float-right" title="semasioFlow.load module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="semasioFlow.contextwords.html" class="btn btn-neutral float-left" title="semasioFlow.contextwords module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Mariana Montes.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
