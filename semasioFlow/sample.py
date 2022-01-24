@@ -4,9 +4,10 @@ import numpy as np
 from tqdm import tqdm
 import re
 
-from nephosem import CorpusFormatter
+from nephosem import CorpusFormatter, TokenHandler
+from nephosem.utils import save_concordance
 
-def sampleTypes(selection, fnames, settings, oneperfile = True):
+def sampleTypes(selection, fnames, settings, oneperfile = True, concordance = None):
     """Generate a random sample of tokens and the list of files required to extract them.
 
     Parameters
@@ -19,6 +20,8 @@ def sampleTypes(selection, fnames, settings, oneperfile = True):
         Configuration settings as designed from the `nephosem` workflow.
     oneperfile : bool
         Whether only one token of each lemma can be extracted from the same file.
+    concordance : str
+        File name to store concordance. If `None`, then no concordance is generated.
 
     Returns
     -------
@@ -62,6 +65,11 @@ def sampleTypes(selection, fnames, settings, oneperfile = True):
                     selection[target_type] -= 1
                     tokens.add(tid)
                     final_files.add(file)
+    if concordance is not None:
+        tokhan = TokenHandler(query, settings=settings)
+        tokens = tokhan.retrieve_tokens(fnames = list(final_files)).submatrix(row = list(tokens))
+        save_concordance(concordance, tokhan.type2toks, colloc_fmt='word')
+        logger.info(f"Concordance of {len(tokens)} tokens with window size of {settings['left-span']}-{settings['right-span']} stored in {concordance}.")
             
     return (list(tokens), list(final_files))
 
