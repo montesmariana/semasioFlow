@@ -15,6 +15,8 @@ from the `semcloud <https://montesmariana.github.io/semcloud>`_ R package to the
 be visualized with `NephoVis <https://qlvl.github.io/NephoVis/>`_ or
 `this Shiny App <https://marianamontes.shinyapps.io/Level3/>`_.
 
+.. image:: https://zenodo.org/badge/399496407.svg
+
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
