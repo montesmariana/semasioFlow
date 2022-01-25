@@ -6,6 +6,8 @@ import pandas as pd
 from nephosem import CorpusFormatter
 from nephosem.core.graph import SentenceGraph
 
+__all__ = ['listContextwords']
+
 def sameSentence(here, target, delimiters):
     """Determine whether two tokens are in the same sentence.
     

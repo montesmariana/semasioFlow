@@ -4,8 +4,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 from nephosem import TypeTokenMatrix
-from nephosem.specutils.deputils import parse_pattern, draw_tree, draw_match, draw_labels, get_root
+from nephosem.specutils.deputils import draw_labels
 
+__all__ = ['booleanize', 'listCws', 'countCws', 'plotPatterns', 'fullMerge']
 
 def booleanize(mtx, include_negative = True):
     """Transform matrix into matrix of 1's and 0's.

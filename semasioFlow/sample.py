@@ -7,6 +7,8 @@ import re
 from nephosem import CorpusFormatter, TokenHandler
 from nephosem.utils import save_concordance
 
+__all__ = ['sampleTypes']
+
 def sampleTypes(selection, fnames, settings, oneperfile = True, concordance = None):
     """Generate a random sample of tokens and the list of files required to extract them.
 

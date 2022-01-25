@@ -7,8 +7,9 @@ from nephosem import Vocab, TypeTokenMatrix
 from nephosem import compute_association, compute_distance
 from nephosem.specutils.mxcalc import compute_token_weights, compute_token_vectors
 
-from semasioFlow.utils import fullMerge
-from semasioFlow.utils import listCws, countCws
+from .utils import fullMerge, listCws, countCws
+
+__all__ = ['targetPPMI','weightTokens', 'createSoc']
 
 def targetPPMI(targets, vocabs, collocs, type_name = None, main_matrix = None, fname = None, output_dir = None):
     """Registers PPMI values of a target lemma(s) with all possible context words.

@@ -7,6 +7,8 @@ from nephosem import Vocab, TypeTokenMatrix
 from nephosem import ItemFreqHandler, ColFreqHandler
 from nephosem.core.graph import MacroGraph, PatternGraph
 
+__all__ = ['loadVocab', 'loadMacro', 'loadColloc', 'loadFocRegisters']
+
 def loadVocab(fname, settings, fnames = None):
     """Load an existing vocabulary or create one.
 

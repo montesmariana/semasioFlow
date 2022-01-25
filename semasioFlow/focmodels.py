@@ -9,7 +9,9 @@ from nephosem import TokenHandler, TypeTokenMatrix # to generate frequency lists
 from nephosem.models.deprel import DepRelHandler
 from nephosem.specutils.mxutils import merge_two_matrices
 
-from semasioFlow.utils import booleanize, listCws, countCws
+from .utils import booleanize
+
+__all__ = ['createBow', 'createRel', 'createPath', 'tokensFromMacro']
 
 def createBow(query, settings, type_name = None,
               fnames = None, foc_win = None, foc_pos = { "all" : []},
